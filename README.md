@@ -1,4 +1,4 @@
-# 🐷 Chanchito Runner
+# 🐷 Yapi Runner
 
 Runner infinito estilo "dinosaurio de Chrome" para celular. **Angular 20 + Capacitor 7**, gráficos en `canvas` 2D
 y puntajes guardados en **SQLite** dentro del teléfono.
@@ -7,7 +7,7 @@ y puntajes guardados en **SQLite** dentro del teléfono.
 
 | Requisito | Dónde está |
 |---|---|
-| Chanchito con 4 fotogramas corriendo | `src/app/game/sprites.ts` (procedural, estilo de la mascota). Tus PNG lo reemplazan: ver abajo |
+| Yapi con 4 fotogramas corriendo | `src/app/game/sprites.ts` (procedural, estilo de la mascota). Tus PNG lo reemplazan: ver abajo |
 | Parallax de ciudad | 6 capas (nubes, skyline lejano, edificios, locales, farolas/árboles, calle) en `sprites.ts`; se dibujan en `engine.ts → drawLayers()` |
 | Puntos = distancia recorrida | `engine.ts` (metros = px / 40) |
 | Monedas con una Y que suman puntos | +25 por moneda (`CFG.coinPoints`), en filas y arcos aleatorios |
@@ -60,7 +60,7 @@ Cada vez que cambies código: `npm run sync` y volvé a compilar desde Android S
 Todo el arte está dibujado por código imitando la mascota: render 3D tipo plastilina, luz arriba-izquierda,
 paleta naranja / durazno / crema y estrellitas doradas.
 
-- **Chanchito corredor** (`sprites.ts → drawPig`): **bípedo** (dos piernas y dos brazos), cabeza grande,
+- **Yapi corredor** (`sprites.ts → drawPig`): **bípedo** (dos piernas y dos brazos), cabeza grande,
   gorro naranja tejido, remera crema y delantal, sin nada en las manos. El ciclo de carrera son 4 poses
   escritas a mano en `RUN_POSES` (apoyo, vuelo, apoyo opuesto, vuelo opuesto) más una pose de salto, así el
   pie de apoyo siempre queda sobre el piso. Piernas y brazos son de dos segmentos (`drawLeg` / `drawArm`).
@@ -101,7 +101,7 @@ difícil. Las cajas están en `sprites.ts`:
 **Los dos fotogramas del pájaro se recortan con una caja común** (la unión de ambos), no cada uno por
 su cuenta: si no, el pájaro saltaría de posición al aletear. Por eso tienen que venir exportados con
 el mismo tamaño de lienzo; si no coinciden, se usan sin recortar. Lo mismo vale para los fotogramas
-del chanchito, que además se usan siempre sin recortar.
+del Yapi, que además se usan siempre sin recortar.
 
 La pelota puede no ser cuadrada (se ajusta sin deformar), y el radio con el que choca sale de su lado
 más corto para que nunca golpee fuera del dibujo. El pájaro bajo se ancla por su borde inferior y el
