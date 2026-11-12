@@ -1,0 +1,84 @@
+:root {
+  --sky-top: #a9defc;
+  --sky-bottom: #fff3df;
+  --pig: #f7a291;
+  --pig-dark: #dc7a72;
+  --ink: #3a2a2a;
+  --card: rgba(255, 252, 246, 0.95);
+  --accent: #ff7a1f;
+  --accent-dark: #c4491f;
+  --gold: #f6bf45;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+  background: var(--sky-top);
+  color: var(--ink);
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  -webkit-user-select: none;
+  user-select: none;
+  touch-action: manipulation;
+}
+
+app-root {
+  display: block;
+  height: 100%;
+}
+
+.btn {
+  appearance: none;
+  border: 0;
+  border-radius: 999px;
+  padding: 14px 28px;
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #fff;
+  background: var(--accent);
+  box-shadow: 0 5px 0 var(--accent-dark), 0 10px 18px rgba(120, 50, 20, 0.25);
+  cursor: pointer;
+  transition: transform 0.08s ease, box-shadow 0.08s ease;
+}
+
+.btn:active {
+  transform: translateY(4px);
+  box-shadow: 0 1px 0 var(--accent-dark), 0 4px 8px rgba(120, 50, 20, 0.25);
+}
+
+.btn:disabled {
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+.btn.secondary {
+  background: #ffffff;
+  color: var(--ink);
+  box-shadow: 0 5px 0 #e2cfae, 0 10px 18px rgba(120, 50, 20, 0.18);
+}
+
+.page {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: max(16px, env(safe-area-inset-top)) max(16px, env(safe-area-inset-right))
+    max(16px, env(safe-area-inset-bottom)) max(16px, env(safe-area-inset-left));
+  background: linear-gradient(180deg, var(--sky-top) 0%, var(--sky-bottom) 72%, #f2e2c8 72%, #e0cba8 82%, #585066 82%, #463f54 100%);
+  overflow: auto;
+}
+
+.card {
+  width: min(520px, 100%);
+  background: var(--card);
+  border-radius: 24px;
+  padding: 24px;
+  box-shadow: 0 14px 40px rgba(120, 50, 20, 0.25);
+}

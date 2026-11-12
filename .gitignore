@@ -1,0 +1,13 @@
+node_modules/
+dist/
+out-tsc/
+.angular/
+.DS_Store
+
+# Android generado por Capacitor (se puede versionar si querés; ver README)
+android/app/build/
+android/.gradle/
+android/build/
+android/local.properties
+android/capacitor-cordova-android-plugins/
+android/app/src/main/assets/public/
